@@ -1,0 +1,16 @@
+.platzi{
+    
+}
+
+header{
+ 
+    background-color: blueviolet;
+    color: white;
+ 
+}
+
+.centrartexto {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+}
