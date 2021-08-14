@@ -49,10 +49,41 @@ console.groupEnd()
 const perimetroCuadrado = lado => lado *4 ;
 const areacuadrado = lado => lado * lado ;
 //triangulo 
-const perimetroTriangulo = (base, lado1, lado2) => base+ lado1 + lado2
+const perimetroTriangulo = (base, lado1, lado2) => base+lado1+lado2
 const areaTriangulo = (base,altura) => (base * altura) / 2
 //circulo
 const DiametroCirculo = radio => radio * 2 
 const PI = Math.PI 
 const perimetroCirculo  = radio => DiametroCirculo(radio) * PI
 const areaCirculo = radio => (radio  * radio) *2 
+
+/* 
+aqui interactuamos con el html  */
+
+
+
+function calcularTriangulo (){
+    const altura = parseInt(document.getElementById("inputTrainguloAltura").value) 
+    const base =  parseInt(document.getElementById("inputTrainguloBase").value)
+    const ladoA = parseInt(document.getElementById("inputTrainguloLadoA").value)
+    const ladoB = parseInt(document.getElementById("inputTrainguloLadoB").value)
+
+ 
+
+
+    const perimetro =perimetroTriangulo(base,ladoA,ladoB)
+    const area = areaTriangulo(base,altura)
+
+    console.log(`el perimetro es ${perimetro} y el area es ${area}`)
+
+    if (altura,base, ladoA,ladoB> 0){
+
+        document.getElementById("RespuestaArea").innerHTML=`${area} cm`
+        document.getElementById("Respuestaperimetro").innerHTML=`${perimetro} cm`
+        
+    }else{
+        document.getElementById("RespuestaArea").innerHTML=`0`
+        document.getElementById("Respuestaperimetro").innerHTML=`0`
+        
+    }
+}

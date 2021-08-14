@@ -8,116 +8,118 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="./figuras.css" />
   <title>Curso practico de JavaScript</title>
 </head>
 
 <header class="border-bottom blanco">
-  <nav class="navbar navbar-expand-sm navbar-light   ">
+  <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="./images/logo.svg" width="65" alt="" /> </a>
+      <a class="navbar-brand" href="#"><img src="./images/logo.svg" width="65" alt="" />
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
         aria-label="Toogle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-
       <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
         <ul class="navbar-nav van">
           <li class="nav-item">
             <a class="nav-link active" href="#">Figuras Geométricas Básicas</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#">Figuras Geométricas complejas</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Figuras Geométricas complejas</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-
-
 </header>
 
 <body>
   <div class="container fondo2 rounded-3">
     <div class="text-center m-3">
-      <h1 class="fw-bold ">Curso Practico de JavaScript en  <span style="color: #95ca3e;">Platzi </span>  <span style='font-size:60px;'>&#128075;</span></h1>
+      <h1 class="fw-bold">
+        Curso Pr&aacute;ctico de JavaScript en
+        <span style="color: #95ca3e">Platzi </span>
+        <span style="font-size: 60px">&#128075;</span>
+      </h1>
     </div>
-    <div class="container  p-4 mt-5 blanco sombra rounded-3">
-      <div class="row align-items-center ">
-        
+    <div class="container p-4 mt-5 blanco sombra rounded-3">
+      <div class="row align-items-center">
+        <div class="
+              btn-group-sm
+              col-12 col-xl-1
+              flex-sm-column
+              d-flex
+              justify-content-around
+            " role="group" aria-label="Basic outlined example">
+          <button type="button" class="btn btn-primary mt-sm-1">
+            <img style="fill: ivory" class="rounded mx-auto d-block" src="./images/Poligono.svg" width="50" alt="" />
+          </button>
+          <button type="button" class="btn btn-primary mt-sm-1">
+            <img class="rounded mx-auto d-block" src="./images/Elipse.svg" width="50" alt="" />
+          </button>
+          <button type="button" class="btn btn-primary mt-sm-1">
+            <img class="rounded mx-auto d-block" src="./images/Rectangulo.svg" width="50" alt="" />
+          </button>
+        </div>
 
-          
-
-
-              <div class="btn-group  col-12  col-sm-1  d-flex  flex-row flex-sm-column justify-content-center" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-primary"><img style="fill: ivory;"  class="rounded mx-auto d-block"
-                  src="./images/Poligono.svg"  width="50" alt=""></button>
-                <button type="button" class="btn btn-primary"><img class="rounded mx-auto d-block"
-                  src="./images/Elipse.svg" width="50" alt=""></button>
-                <button type="button" class="btn btn-primary"><img class="rounded mx-auto d-block"
-                  src="./images/Rectangulo.svg" width="50" alt=""></button>
-              </div>
-
-
-        
-        <div class=" col-12 col-sm p-3 ">
+        <div class="col-12 col-sm p-3">
           <h3>
-            ¡Vamos a calcular el área y perímetro de un Triángulo!
+            ¡Vamos a calcular el &aacute;rea y per&iacute;metro de un
+            Tri&aacute;ngulo!
           </h3>
-          <p>Ingresa las medidas del triángulo y presiona el boton “calcular”.</p>
-
+          <p>
+            Ingresa las medidas del tri&aacute;ngulo y presiona el boton
+            “calcular”.
+          </p>
 
           <div class="">
-
             <form class="row g-2">
-
               <!--  BUTTTONES DE SUMAS ETC -->
-  
-            
-  
-              <div class="col-md-6  p-2 espaciobuttons ">
-                <label for="validationCustomUsername" class="form-label">Area</label>
+
+              <div class="col-md-6 p-2 espaciobuttons">
+                <label for="validationCustomUsername" class="form-label">Altura</label>
                 <div class="input-group has-validation">
-                  <input type="number" min="0"  class="form-control " id="trianguloArea"
-                    aria-describedby="inputGroupPrepend"  placeholder="Ingresa el Area" required>
-                  <span class="input-group-text  " id="inputGroupPrepend">cm</span>
+                  <input type="number" min="0" class="form-control" id="inputTrainguloAltura"
+                    aria-describedby="inputGroupPrepend" placeholder="Ingresa el Area" required />
+                  <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
                     Please choose a username.
                   </div>
                 </div>
               </div>
-              <div class="col-md-6  p-2 espaciobuttons">
+              <div class="col-md-6 p-2 espaciobuttons">
                 <label for="validationCustomUsername" class="form-label">Base</label>
                 <div class="input-group has-validation">
-                  <input type="number" min="0"  class="form-control" id="trianguloBase"
-                  placeholder="Ingresa la Base"
-                    aria-describedby="inputGroupPrepend" required>
+                  <input type="number" min="0" class="form-control" id="inputTrainguloBase"
+                    placeholder="Ingresa la Base" aria-describedby="inputGroupPrepend" required />
                   <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
                     Please choose a username.
                   </div>
                 </div>
               </div>
-              <div class="col-md-6  p-2 espaciobuttons">
+              <div class="col-md-6 p-2 espaciobuttons">
                 <label for="validationCustomUsername" class="form-label">Lado A</label>
                 <div class="input-group has-validation">
-                  <input type="number" min="0"  class="form-control" id="trianguloLadoA"
-                  placeholder="Ingresa el lado A"
-                    aria-describedby="inputGroupPrepend" required>
+                  <input type="number" min="0" class="form-control" id="inputTrainguloLadoA"
+                    placeholder="Ingresa el lado A" aria-describedby="inputGroupPrepend" required />
                   <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
                     Please choose a username.
                   </div>
                 </div>
-              </div> <div class="col-md-6 p-2 espaciobuttons">
-                <label for="validationCustomUsername" class="form-label">Lado B</label>
+              </div>
+              <div class="col-md-6 p-2 espaciobuttons">
+                <label for="inputTrainguloLadoB" class="form-label">Lado B</label>
                 <div class="input-group has-validation">
-                  <input type="number"   min="0" class="form-control" id="trianguloLadoB"
-                  placeholder="Ingresa el lado B"
-                    aria-describedby="inputGroupPrepend" required>
+                  <input type="number" min="0" class="form-control" id="inputTrainguloLadoB"
+                    placeholder="Ingresa el lado B" aria-describedby="inputGroupPrepend" required />
                   <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
                     Please choose a username.
@@ -125,33 +127,30 @@
                 </div>
               </div>
               <div class="d-grid mt-4">
-                <button class="btn btn-primary" type="submit">
-               <!--    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
-                 Calcular
+                <button class="btn btn-primary" type="submit" onclick="calcularTriangulo()">
+                  <!--    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
+                  Calcular
                 </button>
               </div>
-
-              
             </form>
           </div>
         </div>
 
-        <div class=" col-12 col-sm p-3">
+        <div class="col-12 col-sm p-3">
           <img src="./images/triangulo.svg" class="w-50 mx-auto d-block" alt="circulo" />
-         
 
-          <div class="container bg-primary">
-
+          <div class="container">
+            <p>El &aacute;rea del tri&aacute;ngulo es: <span id="RespuestaArea">0</span> </p>
+            <p>El per&iacute;metro del tri&aacute;ngulo es: <span id="Respuestaperimetro">0</span> </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
-
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrap/js/popper.min.js"></script>
+  <script src="./figuras.js"></script>
 </body>
 
 </html>
