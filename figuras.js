@@ -52,9 +52,9 @@ const areacuadrado = lado => lado * lado ;
 const perimetroTriangulo = (base, lado1, lado2) => base+lado1+lado2
 const areaTriangulo = (base,altura) => (base * altura) / 2
 //circulo
-const DiametroCirculo = radio => radio * 2 
+const diametrocirculo = (radio) => radio * 2 
 const PI = Math.PI 
-const perimetroCirculo  = radio => DiametroCirculo(radio) * PI
+const perimetroCirculo  = radio => diametrocirculo(radio) * PI
 const areaCirculo = radio => (radio  * radio) *2 
 
 /* 
@@ -62,28 +62,88 @@ aqui interactuamos con el html  */
 
 
 
-function calcularTriangulo (){
+function calcularCirculo(){
+
+    document.getElementById("formulario2").classList.add("was-validated")
+
+
+  
+    const radio = parseInt(document.getElementById("inputRadio").value) 
+
+    const diametro = diametrocirculo(radio)
+    const perimetro = perimetroCirculo(radio)
+    const area = areaCirculo(radio)
+
+  
+    
+    
+    if (radio){
+
+        document.getElementById("RespuestaAreaCirculo").innerHTML=`${area.toFixed(1)} cm`
+        document.getElementById("RespuestaperimetroCirculo").innerHTML=`${perimetro.toFixed(1)} cm`
+        document.getElementById("RespuestaDiametroCirculo").innerHTML=`${diametro.toFixed(1)} cm`
+        
+    }else if (!radio) {
+        document.getElementById("RespuestaAreaCirculo").innerHTML=`0 cm`
+        document.getElementById("RespuestaperimetroCirculo").innerHTML=`0 cm`
+        document.getElementById("RespuestaDiametroCirculo").innerHTML=`0 cm`
+    }
+
+}
+
+
+
+function CalcularCuadrado(){
+    document.getElementById("formulario3").classList.add("was-validated")
+
+    const lados = parseInt(document.getElementById("inputLadosCuadrado").value)
+    const perimetro = perimetroCuadrado(lados)
+    const area = areacuadrado(lados)
+
+
+
+    
+    if (lados){
+
+        document.getElementById("RespuestaAreaCuadrado").innerHTML=`${area.toFixed(1)} cm²`
+        document.getElementById("RespuestaperimetroCuadrado").innerHTML=`${perimetro.toFixed(1)} cm`
+        
+    }else if (!lados) {
+        document.getElementById("RespuestaAreaCuadradoRespuestaperimetroCuadrado").innerHTML=`0 cm`
+        document.getElementById("RespuestaperimetroCuadrado").innerHTML=`0 cm`
+        
+    }
+
+}
+
+function calcularTriangulo(){
+
+
+    document.getElementById("formulario").classList.add("was-validated")
+
+
     const altura = parseInt(document.getElementById("inputTrainguloAltura").value) 
     const base =  parseInt(document.getElementById("inputTrainguloBase").value)
     const ladoA = parseInt(document.getElementById("inputTrainguloLadoA").value)
     const ladoB = parseInt(document.getElementById("inputTrainguloLadoB").value)
 
- 
 
 
     const perimetro =perimetroTriangulo(base,ladoA,ladoB)
     const area = areaTriangulo(base,altura)
 
-    console.log(`el perimetro es ${perimetro} y el area es ${area}`)
 
-    if (altura,base, ladoA,ladoB> 0){
 
-        document.getElementById("RespuestaArea").innerHTML=`${area} cm`
-        document.getElementById("Respuestaperimetro").innerHTML=`${perimetro} cm`
+
+    if (altura&base&ladoA&ladoB){
+
+        document.getElementById("RespuestaArea").innerHTML=`${area.toFixed(1)} cm`
+        document.getElementById("Respuestaperimetro").innerHTML=`${perimetro.toFixed(1)} cm`
         
-    }else{
-        document.getElementById("RespuestaArea").innerHTML=`0`
-        document.getElementById("Respuestaperimetro").innerHTML=`0`
+    }else if (altura,base, ladoA,ladoB == 0) {
+        document.getElementById("RespuestaArea").innerHTML=`0 cm`
+        document.getElementById("Respuestaperimetro").innerHTML=`0 cm`
         
     }
 }
+

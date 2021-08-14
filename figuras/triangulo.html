@@ -1,0 +1,67 @@
+<div class="col-12 col-sm p-3">
+    <h3>
+      ¡Vamos a calcular el &aacute;rea y per&iacute;metro de un
+      Tri&aacute;ngulo!
+    </h3>
+    <p>
+      Ingresa las medidas del tri&aacute;ngulo y presiona el boton
+      “calcular”.
+    </p>
+
+    <div class="">
+      <form class="row g-2">
+        <!--  BUTTTONES DE SUMAS ETC -->
+
+        <div class="col-md-6 p-2 espaciobuttons">
+          <label for="validationCustomUsername" class="form-label">Altura</label>
+          <div class="input-group has-validation">
+            <input type="number" min="0" class="form-control" id="inputTrainguloAltura"
+              aria-describedby="inputGroupPrepend" placeholder="Ingresa el Area" required />
+            <span class="input-group-text" id="inputGroupPrepend">cm</span>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-2 espaciobuttons">
+          <label for="validationCustomUsername" class="form-label">Base</label>
+          <div class="input-group has-validation">
+            <input type="number" min="0" class="form-control" id="inputTrainguloBase"
+              placeholder="Ingresa la Base" aria-describedby="inputGroupPrepend" required />
+            <span class="input-group-text" id="inputGroupPrepend">cm</span>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-2 espaciobuttons">
+          <label for="validationCustomUsername" class="form-label">Lado A</label>
+          <div class="input-group has-validation">
+            <input type="number" min="0" class="form-control" id="inputTrainguloLadoA"
+              placeholder="Ingresa el lado A" aria-describedby="inputGroupPrepend" required />
+            <span class="input-group-text" id="inputGroupPrepend">cm</span>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-2 espaciobuttons">
+          <label for="inputTrainguloLadoB" class="form-label">Lado B</label>
+          <div class="input-group has-validation">
+            <input type="number" min="0" class="form-control" id="inputTrainguloLadoB"
+              placeholder="Ingresa el lado B" aria-describedby="inputGroupPrepend" required />
+            <span class="input-group-text" id="inputGroupPrepend">cm</span>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="d-grid mt-4">
+          <button class="btn btn-primary" type="submit" onclick="calcularTriangulo()">
+            <!--    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
+            Calcular
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>

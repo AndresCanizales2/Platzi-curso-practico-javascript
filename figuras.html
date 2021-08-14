@@ -57,18 +57,18 @@
               d-flex
               justify-content-around
             " role="group" aria-label="Basic outlined example">
-          <button type="button" class="btn btn-primary mt-sm-1">
+          <button type="button" class="btn btn-primary mt-sm-1" onclick="mostrarTriangulo()">
             <img style="fill: ivory" class="rounded mx-auto d-block" src="./images/Poligono.svg" width="50" alt="" />
           </button>
-          <button type="button" class="btn btn-primary mt-sm-1">
+          <button type="button" class="btn btn-primary mt-sm-1" onclick="mostrarCirculo()">
             <img class="rounded mx-auto d-block" src="./images/Elipse.svg" width="50" alt="" />
           </button>
-          <button type="button" class="btn btn-primary mt-sm-1">
+          <button type="button" class="btn btn-primary mt-sm-1" onclick="mostrarCuadrado()">
             <img class="rounded mx-auto d-block" src="./images/Rectangulo.svg" width="50" alt="" />
           </button>
         </div>
 
-        <div class="col-12 col-sm p-3">
+        <div class="col-12 col-sm p-3" id="triangulo">
           <h3>
             ¡Vamos a calcular el &aacute;rea y per&iacute;metro de un
             Tri&aacute;ngulo!
@@ -79,7 +79,7 @@
           </p>
 
           <div class="">
-            <form class="row g-2">
+            <form class="row g-2 formularios"  id="formulario">
               <!--  BUTTTONES DE SUMAS ETC -->
 
               <div class="col-md-6 p-2 espaciobuttons">
@@ -89,7 +89,7 @@
                     aria-describedby="inputGroupPrepend" placeholder="Ingresa el Area" required />
                   <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Porfavor, Dijite la Altura
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@
                     placeholder="Ingresa la Base" aria-describedby="inputGroupPrepend" required />
                   <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Por favor, Dijite la Base
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@
                     placeholder="Ingresa el lado A" aria-describedby="inputGroupPrepend" required />
                   <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Por favor, Dijite el lado A 
                   </div>
                 </div>
               </div>
@@ -122,12 +122,46 @@
                     placeholder="Ingresa el lado B" aria-describedby="inputGroupPrepend" required />
                   <span class="input-group-text" id="inputGroupPrepend">cm</span>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Por favor, Dijite el lado B
                   </div>
                 </div>
               </div>
               <div class="d-grid mt-4">
-                <button class="btn btn-primary" type="submit" onclick="calcularTriangulo()">
+                <button class="btn btn-primary" type="button" onclick="calcularTriangulo()">
+                 
+                  Calcular
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm p-3" id="circulo">
+          <h3>
+            ¡Vamos a calcular el radio de un Circulo!
+          </h3>
+          <p>
+            Ingresa el radio del circulo y presiona el boton “calcular”, para obtener el Diametro, Perimetro y Area 
+          </p>
+
+          <div class="">
+            <form class="row g-1 d-flex justify-content-center" id="formulario2">
+              <!--  BUTTTONES DE SUMAS ETC -->
+
+              
+              <div class="col-md-6 p-2 espaciobuttons">
+                <label for="inputRadio" class="form-label">Radio</label>
+                <div class="input-group has-validation">
+                  <input type="number" min="0" class="form-control form-control-lg" id="inputRadio"
+                     aria-describedby="inputGroupPrepend"  placeholder="Ingresa el Radio" required />
+                  <span class="input-group-text" id="inputGroupPrepend">cm</span>
+                  <div class="invalid-feedback">
+                    Por favor, Dijite el Radio
+                  </div>
+                </div>
+              </div>
+              <div class="d-grid mt-4">
+                <button class="btn btn-primary" id="btn_Validar" type="button" onclick="calcularCirculo()">
                   <!--    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
                   Calcular
                 </button>
@@ -136,12 +170,73 @@
           </div>
         </div>
 
-        <div class="col-12 col-sm p-3">
+        <div class="col-12 col-sm p-3" id="cuadrado">
+          <h3>
+            ¡Vamos a calcular el radio de un Cuadrado!
+          </h3>
+          <p class="p-4">
+            Ingresa la medida de los lados del cuadrado y presiona el boton “calcular” para obtener el area y el perimetro.
+          </p>
+
+          <div class="">
+            <form class="row g-1 d-flex justify-content-center" id="formulario3">
+              <!--  BUTTTONES DE SUMAS ETC -->
+
+              
+              <div class="col-md-6 p-2 espaciobuttons">
+                <label for="inputLadosCuadrado" class="form-label">Lados</label>
+                <div class="input-group has-validation">
+                  <input type="number" min="0" class="form-control form-control-lg" id="inputLadosCuadrado"
+                     aria-describedby="inputGroupPrepend"  placeholder="Ingresa los Lados" required />
+                  <span class="input-group-text" id="inputGroupPrepend">cm</span>
+                  <div class="invalid-feedback">
+                    Por favor, Dijite los lados del cuadrados
+                  </div>
+                </div>
+              </div>
+              <div class="d-grid mt-4">
+                <button class="btn btn-primary" id="btn_Validar" type="button" onclick="CalcularCuadrado()">
+                  <!--    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
+                  Calcular
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+       
+
+        <div class="col-12 col-sm p-3" id="rtriangulo">
           <img src="./images/triangulo.svg" class="w-50 mx-auto d-block" alt="circulo" />
 
-          <div class="container text-center">
-            <p class="fst-italic">El &aacute;rea del tri&aacute;ngulo es: <span class="fw-bold" id="RespuestaArea">0</span> </p>
-            <p class="fst-italic">El per&iacute;metro del tri&aacute;ngulo es: <span class="fw-bold" id="Respuestaperimetro">0</span> </p>
+          <div class="container p-3 respuestabg">
+            <p class="fst-italic m-0  letra">El &aacute;rea del tri&aacute;ngulo es:</p><h2 class="fw-bold m-1 text-center" id="RespuestaArea">0 cm</h2> 
+            <p class="fst-italic m-0 letra">El per&iacute;metro del tri&aacute;ngulo es:  </p><h2 class="fw-bold  m-1 text-center" id="Respuestaperimetro">0 cm</>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm p-3" id="rcirculo">
+          <img src="./images/circulo.svg" class="w-50 mx-auto d-block" alt="circulo" />
+
+          <div class="container row p-3 respuestabg">
+            <div class="col">
+            <p class="fst-italic m-0  letra">El &aacute;rea del C&iacute;rculo es:</p><h2 class="fw-bold m-1 text-center" id="RespuestaAreaCirculo">0 cm</h2> 
+            </div>
+            <div class="col">
+              <p class="fst-italic m-0  letra">El perimetro del C&iacute;rculo es:</p><h2 class="fw-bold m-1 text-center" id="RespuestaperimetroCirculo">0 cm</h2> 
+              </div>
+              <div class="col">
+                <p class="fst-italic m-0  letra">El diametro del C&iacute;rculo es:</p><h2 class="fw-bold m-1 text-center" id="RespuestaDiametroCirculo">0 cm</h2> 
+                </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm p-3" id="rcuadrado">
+          <img src="./images/cuadrado.svg" class="w-50 mx-auto d-block" alt="cuadrado" />
+
+          <div class="container p-3 respuestabg">
+            <p class="fst-italic m-0  letra">El &aacute;rea del cuadrado es:</p><h2 class="fw-bold m-1 text-center" id="RespuestaAreaCuadrado">0 cm²</h2> 
+            <p class="fst-italic m-0 letra">El per&iacute;metro del cuadrado es:  </p><h2 class="fw-bold  m-1 text-center" id="RespuestaperimetroCuadrado">0 cm</p>
           </div>
         </div>
       </div>
@@ -150,13 +245,14 @@
 
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrap/js/popper.min.js"></script>
+  <script src="./actions.js"></script>
   <script src="https://kit.fontawesome.com/339d9e5280.js" crossorigin="anonymous"></script>
   <script src="./figuras.js"></script>
 </body>
 
 <footer class="text-center text-white" style="background-color: #f1f1f1;">
   <!-- Grid container -->
-  <div class="container pt-4">
+  <div class="container pt-4">                                                            
     <!-- Section: Social media -->
     <section class="mb-4">
 
@@ -192,7 +288,7 @@
 
   <!-- Copyright -->
   <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright realizado con  &#128154; Platzi 
+    © 2021 Copyright realizado con  &#128154; Platzi. 
   </div>
   <!-- Copyright -->
 
