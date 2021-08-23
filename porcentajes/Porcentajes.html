@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./porcentajes.css">
+
+  <title>Curso practico de JavaScript</title>
+</head>
+
+<header class="border-bottom  ">
+  <nav class="navbar navbar-expand-sm bg-white navbar-light">
+    <div class="container-md">
+      <div class="navbar-brand">
+        <img src="../images/logo.svg" width="65" alt="" />
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toogle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right " id="navbarToggleExternalContent">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link " href="../figuras.html">Figuras Geométricas Básicas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Porcentajes y Precios</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+
+  <div class="container d-flex justify-content-center my-5">
+
+
+
+    <div class="row w-75   box1">
+      <div class="row  roundedTop ">
+        <h2 class=" m-3 text-center fw-bold">Descuento de tu compra!</h2>
+      </div>
+      <div class="col">
+        <form  class="d-flex justify-content-center  align-items-center flex-column" action="">
+
+          <div class="col-10">
+            <label for="textPrecio" class="form-label">Dijite el precio de su producto:</label>
+            <div class="input-group">
+              <div class="input-group-text">$</div>
+              <input type="number" class="form-control" id="textPrecio" placeholder="205,000">
+            </div>
+          </div>
+
+
+          <div class="">
+            <label for="textPrecio" class="form-label">Dijite el precio de su producto:</label>
+            <div class="input-group">
+             <input type="number" class="form-control" id="textPrecio" placeholder="15">
+             <div class="input-group-text">%</div>
+            </div>
+          </div>
+
+          
+          <div class="d-grid mt-5">
+            <button class="btn btn-primary" type="button" onclick="calcularTriangulo()">
+             
+              Calcular
+            </button>
+          </div>
+
+          <!--   -->
+        </form>
+      </div>
+      <div class="col d-none d-lg-block p-4">
+        <img src="../images//pig.svg" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../lib/bootstrap/js/popper.min.js"></script>
+  <script src="./porcentajes.js"></script>
+  <script src="https://kit.fontawesome.com/339d9e5280.js" crossorigin="anonymous"></script>
+
+</body>
+
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+  <!-- Grid container -->
+  <div class="container ">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+      <!-- Twitter -->
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1 " href="https://twitter.com/andrescani_e"
+        style="color: red;" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter icono"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1 icono"
+        href="https://www.linkedin.com/in/cristian-andres-canizales-a88ab31a9/" role="button"
+        data-mdb-ripple-color="dark"><i class="fab fa-linkedin icono"></i></a>
+      <!-- Github -->
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1 icono" href="https://github.com/AndresCanizales2"
+        role="button" data-mdb-ripple-color="dark"><i class="fab fa-github icono"></i></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright realizado con &#128153; Cristian Canizales de Platzi.
+  </div>
+  <!-- Copyright -->
+
+
+
+</footer>
+
+</html>

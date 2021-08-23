@@ -1,3 +1,6 @@
+
+@import url("../css/colores.css");
+
 .navegador {
   background-color: #ffffffad;
 }
@@ -46,4 +49,9 @@ body {
 
 .letra{
     font-size: 12px;
+}
+
+
+.icono {
+  color: var(--colorPrimario);
 }
