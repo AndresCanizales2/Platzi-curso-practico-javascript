@@ -1,10 +1,29 @@
 
+const onClickButtonPriceDiscount = () => {
 
-const onClickButtonPriceDiscount = (precioOriginal, descuento) => {
+    document.getElementById("formulario").classList.add("was-validated")
+    
+       const descuento = parseInt(document.getElementById("textDescuento").value) 
+       const precioOriginal = parseInt(document.getElementById("textPrecio").value) 
    const porcentajeDescuento = precioOriginal* (descuento/100)
    const precioTotal   = precioOriginal  - porcentajeDescuento
 
-    return precioTotal
+
+  
+   console.log(precioTotal)
+
+
+    if(precioOriginal&&descuento){
+     
+        document.getElementById("RespuestaArea").innerHTML= `$ ${precioTotal}`
+        console.log(precioTotal)
+
+    }else if (!(precioOriginal&descuento) ){
+        document.getElementById("RespuestaArea").innerHTML= `$ 0`
+        console.log('no se')
+
+    }
+    
 }
 
 

@@ -140,7 +140,7 @@ function calcularTriangulo(){
         document.getElementById("RespuestaArea").innerHTML=`${area.toFixed(1)} cm`
         document.getElementById("Respuestaperimetro").innerHTML=`${perimetro.toFixed(1)} cm`
         
-    }else if (altura,base, ladoA,ladoB == 0) {
+    }else if (!(altura&base&ladoA&ladoB)) {
         document.getElementById("RespuestaArea").innerHTML=`0 cm`
         document.getElementById("Respuestaperimetro").innerHTML=`0 cm`
         
