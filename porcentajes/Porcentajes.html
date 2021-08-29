@@ -62,7 +62,7 @@
           <div class="col mt-2">
             <label for="textPrecio" class="form-label">Dijita el precio de su producto:</label>
             <div class="input-group">
-              <div class="input-group-text">$</div>
+              <div class="input-group-text"><i class="fas fa-dollar-sign"></i></div>
               <input type="number"  class="form-control" id="textPrecio" placeholder="Precio"  required/>
               <div class="invalid-feedback">
                 Por favor, Dijite el precio
@@ -76,12 +76,17 @@
           
 
           <div class="col mt-2">
-            <label for="textDescuento" class="form-label">Dijita el descuento:</label>
+            <label for="textDescuento" class="form-label">Dijita el cupon:</label>
             <div class="input-group">
-              <input type="number" class="form-control" id="textDescuento" placeholder="15" required/>
-              <div class="input-group-text">%</div>
+              <div class="input-group-text"><i class="fas fa-tags"></i></div> 
+              <select class="form-select" id="textDescuento" required>
+                <option disabled value="" selected>Cupones</option>
+                <option value="40">CODE120 40%</option>
+                <option value="20">CODE265 20%</option>
+                <option value="50">CODE352 50%</option>
+              </select>
               <div class="invalid-feedback">
-                Por favor, Dijite el precio
+                Por favor, Dijite el cupon
               </div>
             </div>
           </div>
@@ -96,7 +101,7 @@
 
         <div class="container bg-gradient p-4 m-3">
           <p class="fst-italic m-0 letra">El Precio Total es:</p>
-          <h2 class="fw-bold m-1 text-center" id="RespuestaArea">$ 0</h2>
+          <h2 class="fw-bold m-1 text-center" id="RespuestaArea"><i class="fas fa-dollar-sign"></i> 0</h2>
         </div>
       </div>
       <div class="col d-none d-lg-block p-4">
